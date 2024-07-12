@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/tvLicence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Licence by Haris Siddique"
+        app:layout_constraintEnd_toEndOf="@+id/btnAbout"
+        app:layout_constraintStart_toStartOf="@+id/btnAbout"
+        app:layout_constraintTop_toBottomOf="@+id/btnAbout" />
+
+    <Button
+        android:id="@+id/btnAlreadyReadBook"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Already Read Book"
+        app:layout_constraintEnd_toEndOf="@+id/btnCurrentReadingBook"
+        app:layout_constraintStart_toStartOf="@+id/btnCurrentReadingBook"
+        app:layout_constraintTop_toBottomOf="@+id/btnCurrentReadingBook" />
+
+    <Button
+        android:id="@+id/btnSeeAllBooks"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="See All Bookes"
+        app:layout_constraintEnd_toEndOf="@+id/txtName"
+        app:layout_constraintStart_toStartOf="@+id/txtName"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+    <Button
+        android:id="@+id/btnSeeYourFavourite"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="See Your Favourite"
+        app:layout_constraintEnd_toEndOf="@+id/btnYourWishlist"
+        app:layout_constraintStart_toStartOf="@+id/btnYourWishlist"
+        app:layout_constraintTop_toBottomOf="@+id/btnYourWishlist" />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/allan"
+        android:text="My Library"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageLogo" />
+
+    <Button
+        android:id="@+id/btnYourWishlist"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Your Wishlist"
+        app:layout_constraintEnd_toEndOf="@+id/btnAlreadyReadBook"
+        app:layout_constraintStart_toStartOf="@+id/btnAlreadyReadBook"
+        app:layout_constraintTop_toBottomOf="@+id/btnAlreadyReadBook" />
+
+    <Button
+        android:id="@+id/btnCurrentReadingBook"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Current Reading Book"
+        app:layout_constraintEnd_toEndOf="@+id/btnSeeAllBooks"
+        app:layout_constraintStart_toStartOf="@+id/btnSeeAllBooks"
+        app:layout_constraintTop_toBottomOf="@+id/btnSeeAllBooks" />
+
+    <Button
+        android:id="@+id/btnAbout"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="About"
+        app:layout_constraintEnd_toEndOf="@+id/btnSeeYourFavourite"
+        app:layout_constraintStart_toStartOf="@+id/btnSeeYourFavourite"
+        app:layout_constraintTop_toBottomOf="@+id/btnSeeYourFavourite" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
