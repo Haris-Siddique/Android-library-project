@@ -1,5 +1,6 @@
 package com.example.mylibrary;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -26,8 +27,24 @@ public class BookActivity extends AppCompatActivity {
 
         initView();
 
-        Book book = new Book(1, "1 BookOfStory", "Haris", 150, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlAkmuLe5t04pqAdlj0YB8eH2fuikKN6eumA&s", "ShortDes", "LongDesdjhlfakhfjlsdgfljasdgfkjadgsfkudgsufhgsdalfgljsdgfjsdgakfjgsadljfgljdsgfjlasdgfljhgsdafljgdslfgasdjgflsajdgfljsdagfjlgsdljfglsadjgfljsadgfljasgdkfgsadjfglsadjgfljsadgflgsdafjlgsdljfgalhdfglajsgdfljasgdlfsaldjgfkasdgf    LongDesdjhlfakhfjlsdgfljasdgfkjadgsfkudgsufhgsdalfgljsdgfjsdgakfjgsadljfgljdsgfjlasdgfljhgsdafljgdslfgasdjgflsajdgfljsdagfjlgsdljfglsadjgfljsadgfljasgdkfgsadjfglsadjgfljsadgflgsdafjlgsdljfgalhdfglajsgdfljasgdlfsaldjgfkasdgf   LongDesdjhlfakhfjlsdgfljasdgfkjadgsfkudgsufhgsdalfgljsdgfjsdgakfjgsadljfgljdsgfjlasdgfljhgsdafljgdslfgasdjgflsajdgfljsdagfjlgsdljfglsadjgfljsadgfljasgdkfgsadjfglsadjgfljsadgflgsdafjlgsdljfgalhdfglajsgdfljasgdlfsaldjgfkasdgf   LongDesdjhlfakhfjlsdgfljasdgfkjadgsfkudgsufhgsdalfgljsdgfjsdgakfjgsadljfgljdsgfjlasdgfljhgsdafljgdslfgasdjgflsajdgfljsdagfjlgsdljfglsadjgfljsadgfljasgdkfgsadjfglsadjgfljsadgflgsdafjlgsdljfgalhdfglajsgdfljasgdlfsaldjgfkasdgf      LongDesdjhlfakhfjlsdgfljasdgfkjadgsfkudgsufhgsdalfgljsdgfjsdgakfjgsadljfgljdsgfjlasdgfljhgsdafljgdslfgasdjgflsajdgfljsdagfjlgsdljfglsadjgfljsadgfljasgdkfgsadjfglsadjgfljsadgflgsdafjlgsdljfgalhdfglajsgdfljasgdlfsaldjgfkasdgf       LongDesdjhlfakhfjlsdgfljasdgfkjadgsfkudgsufhgsdalfgljsdgfjsdgakfjgsadljfgljdsgfjlasdgfljhgsdafljgdslfgasdjgflsajdgfljsdagfjlgsdljfglsadjgfljsadgfljasgdkfgsadjfglsadjgfljsadgflgsdafjlgsdljfgalhdfglajsgdfljasgdlfsaldjgfkasdgf      LongDesdjhlfakhfjlsdgfljasdgfkjadgsfkudgsufhgsdalfgljsdgfjsdgakfjgsadljfgljdsgfjlasdgfljhgsdafljgdslfgasdjgflsajdgfljsdagfjlgsdljfglsadjgfljsadgfljasgdkfgsadjfglsadjgfljsadgflgsdafjlgsdljfgalhdfglajsgdfljasgdlfsaldjgfkasdgf");
-        setData(book);
+//        Book book = new Book(1, "1 BookOfStory", "Haris", 150, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlAkmuLe5t04pqAdlj0YB8eH2fuikKN6eumA&s", "ShortDes", "LongDesdjhlfakhfjlsdgfljasdgfkjadgsfkudgsufhgsdalfgljsdgfjsdgakfjgsadljfgljdsgfjlasdgfljhgsdafljgdslfgasdjgflsajdgfljsdagfjlgsdljfglsadjgfljsadgfljasgdkfgsadjfglsadjgfljsadgflgsdafjlgsdljfgalhdfglajsgdfljasgdlfsaldjgfkasdgf    LongDesdjhlfakhfjlsdgfljasdgfkjadgsfkudgsufhgsdalfgljsdgfjsdgakfjgsadljfgljdsgfjlasdgfljhgsdafljgdslfgasdjgflsajdgfljsdagfjlgsdljfglsadjgfljsadgfljasgdkfgsadjfglsadjgfljsadgflgsdafjlgsdljfgalhdfglajsgdfljasgdlfsaldjgfkasdgf   LongDesdjhlfakhfjlsdgfljasdgfkjadgsfkudgsufhgsdalfgljsdgfjsdgakfjgsadljfgljdsgfjlasdgfljhgsdafljgdslfgasdjgflsajdgfljsdagfjlgsdljfglsadjgfljsadgfljasgdkfgsadjfglsadjgfljsadgflgsdafjlgsdljfgalhdfglajsgdfljasgdlfsaldjgfkasdgf   LongDesdjhlfakhfjlsdgfljasdgfkjadgsfkudgsufhgsdalfgljsdgfjsdgakfjgsadljfgljdsgfjlasdgfljhgsdafljgdslfgasdjgflsajdgfljsdagfjlgsdljfglsadjgfljsadgfljasgdkfgsadjfglsadjgfljsadgflgsdafjlgsdljfgalhdfglajsgdfljasgdlfsaldjgfkasdgf      LongDesdjhlfakhfjlsdgfljasdgfkjadgsfkudgsufhgsdalfgljsdgfjsdgakfjgsadljfgljdsgfjlasdgfljhgsdafljgdslfgasdjgflsajdgfljsdagfjlgsdljfglsadjgfljsadgfljasgdkfgsadjfglsadjgfljsadgflgsdafjlgsdljfgalhdfglajsgdfljasgdlfsaldjgfkasdgf       LongDesdjhlfakhfjlsdgfljasdgfkjadgsfkudgsufhgsdalfgljsdgfjsdgakfjgsadljfgljdsgfjlasdgfljhgsdafljgdslfgasdjgflsajdgfljsdagfjlgsdljfglsadjgfljsadgfljasgdkfgsadjfglsadjgfljsadgflgsdafjlgsdljfgalhdfglajsgdfljasgdlfsaldjgfkasdgf      LongDesdjhlfakhfjlsdgfljasdgfkjadgsfkudgsufhgsdalfgljsdgfjsdgakfjgsadljfgljdsgfjlasdgfljhgsdafljgdslfgasdjgflsajdgfljsdagfjlgsdljfglsadjgfljsadgfljasgdkfgsadjfglsadjgfljsadgflgsdafjlgsdljfgalhdfglajsgdfljasgdlfsaldjgfkasdgf");
+
+        Intent intent = getIntent();
+
+        if(intent!=null){
+            int bookId= intent.getIntExtra("bookId",-1);
+            if(bookId!=-1){
+
+                Book incomingBook = Utils.getInstance().getBookById(bookId);
+
+                if(incomingBook!=null){
+                    setData(incomingBook);
+                }
+
+            }
+        }
+
+
 
     }
 

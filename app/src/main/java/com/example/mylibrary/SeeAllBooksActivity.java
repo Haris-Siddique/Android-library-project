@@ -11,12 +11,16 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.util.Util;
+
 import java.util.ArrayList;
 
 public class SeeAllBooksActivity extends AppCompatActivity {
 
     private RecyclerView booksRecView;
     private BooksRecViewAdapter adapter;
+
+    private Utils utils;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,14 +29,10 @@ public class SeeAllBooksActivity extends AppCompatActivity {
 
         booksRecView = findViewById(R.id.booksRecView);
         adapter = new BooksRecViewAdapter(this);
+        utils= Utils.getInstance();
 
-        ArrayList<Book> books = new ArrayList<>();
-        books.add(new Book(1,"1 BookOfStory","Haris",150,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlAkmuLe5t04pqAdlj0YB8eH2fuikKN6eumA&s","ShortDes","LongDes"));
-        books.add(new Book(2,"2 BookOfStory","Haris",150,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlAkmuLe5t04pqAdlj0YB8eH2fuikKN6eumA&s","ShortDes","LongDes"));
-        books.add(new Book(3,"3 BookOfStory","Haris",150,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlAkmuLe5t04pqAdlj0YB8eH2fuikKN6eumA&s","ShortDes","LongDes"));
-        books.add(new Book(4,"4 BookOfStory","Haris",150,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlAkmuLe5t04pqAdlj0YB8eH2fuikKN6eumA&s","ShortDes","LongDes"));
 
-        adapter.setBooks(books);
+        adapter.setBooks(utils.getAllBooks());
         booksRecView.setAdapter(adapter);
         booksRecView.setLayoutManager(new LinearLayoutManager(this));
 

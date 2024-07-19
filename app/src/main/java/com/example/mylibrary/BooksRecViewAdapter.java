@@ -90,6 +90,7 @@ public class BooksRecViewAdapter extends RecyclerView.Adapter<BooksRecViewAdapte
 
 //                Toast.makeText(mcontext,books.get(holder.getAdapterPosition()).getName() + "Selected", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(mcontext, BookActivity.class);
+                intent.putExtra("bookId" ,books.get(holder.getAdapterPosition()).getId());
                 mcontext.startActivity(intent);
             }
         });
