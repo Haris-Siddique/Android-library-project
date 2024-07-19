@@ -22,7 +22,7 @@ import java.util.ArrayList;
 public class BooksRecViewAdapter extends RecyclerView.Adapter<BooksRecViewAdapter.ViewHolder> {
 
     private ArrayList<Book> books = new ArrayList<>();
-    private Context mcotext;
+    private Context mcontext;
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private CardView parent;
@@ -66,8 +66,8 @@ public class BooksRecViewAdapter extends RecyclerView.Adapter<BooksRecViewAdapte
 
     }
 
-    public BooksRecViewAdapter(Context mcotext) {
-        this.mcotext = mcotext;
+    public BooksRecViewAdapter(Context mcontext) {
+        this.mcontext = mcontext;
     }
 
     @NonNull
@@ -82,13 +82,15 @@ public class BooksRecViewAdapter extends RecyclerView.Adapter<BooksRecViewAdapte
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         holder.tvBook.setText(books.get(holder.getAdapterPosition()).getName());
-        Glide.with(mcotext).asBitmap().load(books.get(holder.getAdapterPosition()).getImageUrl()).into(holder.ivBook);
+        Glide.with(mcontext).asBitmap().load(books.get(holder.getAdapterPosition()).getImageUrl()).into(holder.ivBook);
 
         holder.parent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(mcotext, BookActivity.class);
-                mcotext.startActivity(intent);
+
+//                Toast.makeText(mcontext,books.get(holder.getAdapterPosition()).getName() + "Selected", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(mcontext, BookActivity.class);
+                mcontext.startActivity(intent);
             }
         });
 
@@ -111,7 +113,6 @@ public class BooksRecViewAdapter extends RecyclerView.Adapter<BooksRecViewAdapte
 
     @Override
     public int getItemCount() {
-
         return books.size();
     }
 

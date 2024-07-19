@@ -17,7 +17,7 @@ public class BookActivity extends AppCompatActivity {
 
     private ImageView imgBook;
     private Button btnAddToFavorite, btnAddToAlreadyReadList, btnAddToCurrentlyReading, btnAddToWantToReadList;
-    private TextView tvBookName, tvAuthorName, tvPages, tvDescription;
+    private TextView tvBookName, tvAuthorName, tvPages, tvDescription, tvLongDescription;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class BookActivity extends AppCompatActivity {
 
         initView();
 
-        Book book = new Book(1, "1 BookOfStory", "Haris", 150, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlAkmuLe5t04pqAdlj0YB8eH2fuikKN6eumA&s", "ShortDes", "LongDes");
+        Book book = new Book(1, "1 BookOfStory", "Haris", 150, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlAkmuLe5t04pqAdlj0YB8eH2fuikKN6eumA&s", "ShortDes", "LongDesdjhlfakhfjlsdgfljasdgfkjadgsfkudgsufhgsdalfgljsdgfjsdgakfjgsadljfgljdsgfjlasdgfljhgsdafljgdslfgasdjgflsajdgfljsdagfjlgsdljfglsadjgfljsadgfljasgdkfgsadjfglsadjgfljsadgflgsdafjlgsdljfgalhdfglajsgdfljasgdlfsaldjgfkasdgf    LongDesdjhlfakhfjlsdgfljasdgfkjadgsfkudgsufhgsdalfgljsdgfjsdgakfjgsadljfgljdsgfjlasdgfljhgsdafljgdslfgasdjgflsajdgfljsdagfjlgsdljfglsadjgfljsadgfljasgdkfgsadjfglsadjgfljsadgflgsdafjlgsdljfgalhdfglajsgdfljasgdlfsaldjgfkasdgf   LongDesdjhlfakhfjlsdgfljasdgfkjadgsfkudgsufhgsdalfgljsdgfjsdgakfjgsadljfgljdsgfjlasdgfljhgsdafljgdslfgasdjgflsajdgfljsdagfjlgsdljfglsadjgfljsadgfljasgdkfgsadjfglsadjgfljsadgflgsdafjlgsdljfgalhdfglajsgdfljasgdlfsaldjgfkasdgf   LongDesdjhlfakhfjlsdgfljasdgfkjadgsfkudgsufhgsdalfgljsdgfjsdgakfjgsadljfgljdsgfjlasdgfljhgsdafljgdslfgasdjgflsajdgfljsdagfjlgsdljfglsadjgfljsadgfljasgdkfgsadjfglsadjgfljsadgflgsdafjlgsdljfgalhdfglajsgdfljasgdlfsaldjgfkasdgf      LongDesdjhlfakhfjlsdgfljasdgfkjadgsfkudgsufhgsdalfgljsdgfjsdgakfjgsadljfgljdsgfjlasdgfljhgsdafljgdslfgasdjgflsajdgfljsdagfjlgsdljfglsadjgfljsadgfljasgdkfgsadjfglsadjgfljsadgflgsdafjlgsdljfgalhdfglajsgdfljasgdlfsaldjgfkasdgf       LongDesdjhlfakhfjlsdgfljasdgfkjadgsfkudgsufhgsdalfgljsdgfjsdgakfjgsadljfgljdsgfjlasdgfljhgsdafljgdslfgasdjgflsajdgfljsdagfjlgsdljfglsadjgfljsadgfljasgdkfgsadjfglsadjgfljsadgflgsdafjlgsdljfgalhdfglajsgdfljasgdlfsaldjgfkasdgf      LongDesdjhlfakhfjlsdgfljasdgfkjadgsfkudgsufhgsdalfgljsdgfjsdgakfjgsadljfgljdsgfjlasdgfljhgsdafljgdslfgasdjgflsajdgfljsdagfjlgsdljfglsadjgfljsadgfljasgdkfgsadjfglsadjgfljsadgflgsdafjlgsdljfgalhdfglajsgdfljasgdlfsaldjgfkasdgf");
         setData(book);
 
     }
@@ -35,8 +35,11 @@ public class BookActivity extends AppCompatActivity {
         Glide.with(this).asBitmap().load(book.getImageUrl()).into(imgBook);
         tvBookName.setText(book.getName());
         tvAuthorName.setText(book.getAuthor());
-        tvPages.setText(book.getPages());
+        tvPages.setText(String.valueOf(book.getPages()));
         tvDescription.setText(book.getshortDesc());
+        tvLongDescription.setText(book.getLongDesc());
+
+
     }
 
 
@@ -50,5 +53,6 @@ public class BookActivity extends AppCompatActivity {
         tvAuthorName = findViewById(R.id.tvAuthorName);
         tvPages = findViewById(R.id.tvPages);
         tvDescription = findViewById(R.id.tvDescription);
+        tvLongDescription = findViewById(R.id.tvLongDescription);
     }
 }
