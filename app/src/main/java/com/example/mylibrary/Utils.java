@@ -99,5 +99,23 @@ public class Utils {
         return currentlyReadingBooks.add(book);
     }
 
+    public boolean removeFromAlreadyRead(Book book){
+        return alreadyReadBooks.remove(book);
+    }
+
+    public boolean removeFromWantToRead(Book book){
+        return wantToReadBooks.remove(book);
+    }
+
+    public boolean removeFromFavorite(Book book){
+        return favoriteBooks.remove(book);
+    }
+
+    public boolean removeFromCurrentlyRead(Book book){
+        return currentlyReadingBooks.remove(book);
+    }
+
+
+
 
 }

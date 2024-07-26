@@ -73,7 +73,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tvAutherName"
-                android:text="Shore Description" />
+                android:text="Shore Description"
+                android:layout_marginBottom="10dp"/>
 
             <ImageView
                 android:id="@+id/upArrow"
@@ -83,6 +84,17 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="20dp"
                 android:src="@drawable/ic_up_arrow" />
+
+            <TextClock
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:layout_below="@+id/tvShortDescription"
+                android:layout_toStartOf="@id/upArrow"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/red"
+                android:visibility="gone"/>
 
 
         </RelativeLayout>

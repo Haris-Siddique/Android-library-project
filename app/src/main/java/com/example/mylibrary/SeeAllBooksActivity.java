@@ -28,7 +28,7 @@ public class SeeAllBooksActivity extends AppCompatActivity {
         setContentView(R.layout.activity_see_all_books);
 
         booksRecView = findViewById(R.id.booksRecView);
-        adapter = new BooksRecViewAdapter(this);
+        adapter = new BooksRecViewAdapter(this , "allBooks");
         utils= Utils.getInstance();
 
 

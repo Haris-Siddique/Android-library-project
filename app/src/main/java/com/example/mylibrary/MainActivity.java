@@ -18,6 +18,10 @@ public class MainActivity extends AppCompatActivity {
 
         initViews();
 
+
+        btnYourWishlist.setEnabled(false);
+        btnAbout.setEnabled(false);
+
         btnSeeAllBooks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -33,6 +37,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, AlreadyReadBookActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnCurrentReadingBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, CurrentBookReadingActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnSeeYourFavourite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, FavoriteBookActivity.class);
                 startActivity(intent);
             }
         });
