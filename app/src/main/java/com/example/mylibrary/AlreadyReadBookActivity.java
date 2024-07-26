@@ -15,7 +15,7 @@ public class AlreadyReadBookActivity extends AppCompatActivity {
         setContentView(R.layout.activity_already_read_book);
 
         RecyclerView recyclerView = findViewById(R.id.bookRecView);
-        BooksRecViewAdapter adapter = new BooksRecViewAdapter(this,"alreadyRead");
+        BooksRecViewAdapter adapter = new BooksRecViewAdapter(this, "alreadyRead");
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter.setBooks(Utils.getAlreadyReadBooks());
@@ -24,7 +24,7 @@ public class AlreadyReadBookActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent intent = new Intent( AlreadyReadBookActivity.this, MainActivity.class);
+        Intent intent = new Intent(AlreadyReadBookActivity.this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }

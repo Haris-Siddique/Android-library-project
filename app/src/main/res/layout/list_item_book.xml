@@ -73,8 +73,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tvAutherName"
-                android:text="Shore Description"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                android:text="Shore Description" />
 
             <ImageView
                 android:id="@+id/upArrow"
@@ -89,12 +89,12 @@
                 android:id="@+id/btnDelete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Delete"
                 android:layout_below="@+id/tvShortDescription"
-                android:layout_toStartOf="@id/upArrow"
                 android:layout_marginRight="10dp"
+                android:layout_toStartOf="@id/upArrow"
+                android:text="Delete"
                 android:textColor="@color/red"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
 
         </RelativeLayout>
