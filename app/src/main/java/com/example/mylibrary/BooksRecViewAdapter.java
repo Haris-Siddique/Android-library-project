@@ -150,8 +150,6 @@ public class BooksRecViewAdapter extends RecyclerView.Adapter<BooksRecViewAdapte
                     }
                 });
             }
-
-
             else if(parentActivity.equals("wantToRead")){
 
                 holder.btnDelete.setVisibility(View.VISIBLE);
