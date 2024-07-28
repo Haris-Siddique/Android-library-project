@@ -29,7 +29,7 @@ public class SeeAllBooksActivity extends AppCompatActivity {
 
         booksRecView = findViewById(R.id.booksRecView);
         adapter = new BooksRecViewAdapter(this , "allBooks");
-        utils= Utils.getInstance();
+        utils= Utils.getInstance(this);
 
 
         adapter.setBooks(utils.getAllBooks());
