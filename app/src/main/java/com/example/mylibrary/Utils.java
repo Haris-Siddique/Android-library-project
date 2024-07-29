@@ -229,7 +229,7 @@ public class Utils {
     }
 
     public boolean removeFromWantToRead(Book book) {
-        ArrayList<Book> books = getAlreadyReadBooks();
+        ArrayList<Book> books = getWantToReadBooks();
 
         if(books != null){
 
@@ -251,7 +251,7 @@ public class Utils {
     }
 
     public boolean removeFromFavorite(Book book) {
-        ArrayList<Book> books = getAlreadyReadBooks();
+        ArrayList<Book> books = getFavoriteBooks();
 
         if(books != null){
 
@@ -273,7 +273,7 @@ public class Utils {
     }
 
     public boolean removeFromCurrentlyRead(Book book) {
-        ArrayList<Book> books = getAlreadyReadBooks();
+        ArrayList<Book> books = getCurrentlyReadingBooks();
 
         if(books != null){
 
